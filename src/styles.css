@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --color-bg: #090a08;
+  --color-surface: #1c1e1a;
+  --color-elevated: #262924;
+  --color-sniper: #8a8e85;
+  --color-line: #3c4038;
+  --color-fg: #f5f4ef;
+  --color-paper: #f3f1ea;
+  --color-ink: #12140f;
+  --color-muted: #b4b7af;
+  --color-subtle: #6e726b;
+  --color-accent: #c4a574;
+  --color-accent-fg: #12140f;
+  --color-danger: #b85c45;
+  --color-ok: #c4a574;
+  --radius-sm: 0.0625rem;
+  --min-height-cover: 72dvh;
+}
+
+@layer base {
+  html, body, #app { min-height: 100dvh; background: var(--color-bg); color: var(--color-fg); }
+  button:not(:disabled), [role="button"]:not(:disabled) { cursor: pointer; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+}
